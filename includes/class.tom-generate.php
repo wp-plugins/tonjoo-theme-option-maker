@@ -78,7 +78,7 @@ class tomGenerate {
 				}
 
 				$short_default = !empty($key['default']) && !is_array($key['default']) ? ' default="'.$key['default'].'"' : '';
-				$shortcode = '[tom id="'.$obj_key.'"'.$short_default.']';
+				$shortcode = '[tom id="'.$obj_key.'"]';
 
 				$output = '';
 
@@ -110,7 +110,7 @@ class tomGenerate {
 					$output .= '<th scope="row"><label for="' . esc_attr( $obj_key ) . '">' . esc_attr( $name ) . '</label><br><span class="description">' . esc_attr( $desc ) . '</span></th>' . "\n";
 					$output .= '<td><textarea class="tom-input" id="' . esc_attr( $obj_key ) . '" name="' . esc_attr( $option_name . '[' . $obj_key . ']' ) . '" placeholder="' . esc_attr( $val ) . '" rows="4" cols="50" ' . $required . '>' . esc_attr( $val ) . '</textarea></td>' . "\n";
 					$output .= '<td class="shortcode">
-									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="#"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
+									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="javascript:;"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
 								</td>' . "\n";
 					$output .= '</tr>' . "\n";
 					break;
@@ -125,7 +125,7 @@ class tomGenerate {
 								}	
 					$output .= '</td>' . "\n";
 					$output .= '<td class="shortcode">
-									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="#"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
+									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="javascript:;"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
 								</td>' . "\n";
 					$output .= '</tr>' . "\n";
 					break;
@@ -140,7 +140,7 @@ class tomGenerate {
 								}	
 					$output .= '</td>' . "\n";
 					$output .= '<td class="shortcode">
-									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="#"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
+									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="javascript:;"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
 								</td>' . "\n";
 					$output .= '</tr>' . "\n";
 					break;
@@ -150,7 +150,7 @@ class tomGenerate {
 					$output .= '<th scope="row"><label for="' . esc_attr( $obj_key ) . '">' . esc_attr( $name ) . '</label><br><span class="description">' . esc_attr( $desc ) . '</span></th>' . "\n";
 					$output .= '<td><input id="' . esc_attr( $obj_key ) . '" class="tom-input" type="' . esc_attr( $type ) . '" name="' . esc_attr( $option_name . '[' . $obj_key . ']' ) . '" value="1" '. checked( $val, '1', false) .' ' . $required . '/></td>' . "\n";
 					$output .= '<td class="shortcode">
-									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="#"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
+									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="javascript:;"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
 								</td>' . "\n";
 					$output .= '</tr>' . "\n";
 					break;
@@ -180,7 +180,7 @@ class tomGenerate {
 								
 					$output .= '</td>' . "\n";
 					$output .= '<td class="shortcode">
-									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="#"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
+									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="javascript:;"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
 								</td>' . "\n";
 					$output .= '</tr>' . "\n";
 
@@ -201,7 +201,7 @@ class tomGenerate {
 								}
 					$output .= '</div></td>' . "\n";
 					$output .= '<td class="shortcode">
-									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="#"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
+									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="javascript:;"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
 								</td>' . "\n";
 					$output .= '</tr>' . "\n";
 					break;
@@ -226,7 +226,7 @@ class tomGenerate {
 								}
 					$output .= '</td>' . "\n";
 					$output .= '<td class="shortcode">
-									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="#"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
+									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="javascript:;"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
 								</td>' . "\n";
 					$output .= '</tr>' . "\n";
 					break;
@@ -243,7 +243,7 @@ class tomGenerate {
 					$output .= '<input name="' . esc_attr( $option_name . '[' . $obj_key . ']' ) . '" id="' . esc_attr( $obj_key ) . '" class="tom-color"  type="text" value="' . esc_attr( $val ) . '"' . $default_color .' ' . $required . '/>';
 					$output .= '</td>' . "\n";
 					$output .= '<td class="shortcode">
-									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="#"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
+									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="javascript:;"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
 								</td>' . "\n";
 					$output .= '</tr>' . "\n";
 					break;
@@ -261,7 +261,7 @@ class tomGenerate {
 								$output = '';
 					$output .= '</td>' . "\n";
 					$output .= '<td class="shortcode">
-									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="#"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
+									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="javascript:;"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
 								</td>' . "\n";
 					$output .= '</tr>' . "\n";
 					break;
@@ -290,7 +290,7 @@ class tomGenerate {
 							  	<input name="' . esc_attr( $option_name . '[' . $obj_key . '][color]' ) . '" id="sample-typography_color" class="tom-color tom-typography-color  type="text" value="' . esc_attr( $val['color'] ) . '"/>';		
 					$output .= '</td>' . "\n";
 					$output .= '<td class="shortcode">
-									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="#"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
+									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="javascript:;"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
 								</td>' . "\n";
 					$output .= '</tr>' . "\n";
 
@@ -302,7 +302,7 @@ class tomGenerate {
 					$output .= '<th scope="row"><label for="' . esc_attr( $obj_key ) . '">' . esc_attr( $name ) . '</label><br><span class="description">' . esc_attr( $desc ) . '</span></th>' . "\n";
 					$output .= '<td><input class="tom-input" type="' . esc_attr( $type ) . '" id="' . esc_attr( $obj_key ) . '" name="' . esc_attr( $option_name . '[' . $obj_key . ']' ) . '" placeholder="' . esc_attr( $val ) . '" value="' . esc_attr( $val ) . '" ' . $required . '></td>' . "\n";
 					$output .= '<td class="shortcode">
-									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="#"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
+									<span><a class="button-copy-shortcode" title="Copy Shortcode" href="javascript:;"><i class="dashicons dashicons-nametag"></i><span class="tooltipValue" data-title="'. esc_attr( $name ) .'" style="display:none;">'.$shortcode.'</span></a></span>
 								</td>' . "\n";
 					$output .= '</tr>' . "\n";
 					// $output .= '<input id="' . esc_attr( $obj_key ) . '" class="tom-input" name="' . esc_attr( $option_name . '[' . $obj_key . ']' ) . '" type="text" value="' . esc_attr( $val ) . '" />';
@@ -407,7 +407,7 @@ class tomGenerate {
 					$obj_key = sanitize_title_with_dashes( $obj_key );
 
 					$output .= '<li class="dd-item tom-item" data-id="'.esc_attr( $obj_key ).'">'."\n";
-						$output .= '<div class="dd-handle">' . $key['name'] ."\n";
+						$output .= '<div class="dd-handle"><span id="'.esc_attr( $obj_key ).'_name">' . $key['name'] ."</span>\n";
 						/* button action */
 						$output .= '<span class="tom-action-buttons">
 										<a class="blue edit-nestable" href="#">

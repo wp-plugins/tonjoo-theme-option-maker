@@ -4,16 +4,18 @@ jQuery(document).ready(function($) {
 	    $('.fade').fadeOut('slow');
 	}, 3000); // <-- time in milliseconds
 
-	/* Set Conntent width */
-	sizeContent();
-	$(window).resize(sizeContent);
+		/* Set Conntent width */
+		sizeContent();
+		$(window).resize(sizeContent);
 
-	function sizeContent() {
-		var windowSize = $('#wpbody-content').width();
-		var main = windowSize - 380;
-		$('.metabox-main').width(main+'px');
-	}
-
+		function sizeContent() {
+			var windowSize = $('#wpbody-content').width();
+			var main = windowSize - 380;
+			$('.metabox-main').width(main+'px');
+			if(tomAdsEnabled != '1') {
+				$('.metabox-main.metabox-options').width('');
+			}
+		}
 	/* Handle Tab Active */
 	if ( $('.nav-tab-wrapper').length > 0 ) {
 		tom_tabs();
@@ -504,7 +506,7 @@ jQuery(document).ready(function($) {
         	activeDiv = $('.nav-tab-active').attr('href');
 
 		template ='<li class="dd-item tom-item" data-id="'+id+'">';
-		template +='  <div class="dd-handle">'+name+'';
+		template +='  <div class="dd-handle"><span id="'+id+'_name">'+name+'</span>';
 		template +='    <span class="tom-action-buttons">';
 		template +='      <a class="blue edit-nestable" href="#">';
 		template +='        <i class="dashicons dashicons-edit"></i>';
@@ -755,6 +757,7 @@ jQuery(document).ready(function($) {
 		var data = {
 			/* actions must be match with add_action name */
 			'action': 'tom_options',
+			'id': buttonId,
 			'options': optionId,
 			'form_data': formData
 		};
@@ -765,10 +768,12 @@ jQuery(document).ready(function($) {
 			$('.settings-error').fadeOut('slow').remove();       	
 			setTimeout( function() {
 					$("#loading-"+buttonId).hide();
+					$("#"+buttonId+"_name").html(response.data.name);
 					// $('#tom-notification').html(response);
-					$('#tom-notification').html(response).fadeIn('slow').delay(1000).fadeOut('slow');
+					$('#tom-notification').html(response.message).fadeIn('slow').delay(1000).fadeOut('slow');
 		    },1000);
-		});
+		// console.log(response.data.name);
+		},"json");
 
 	return false;
 	}
@@ -776,7 +781,7 @@ jQuery(document).ready(function($) {
 
 /* Iklan */
 jQuery(function(){  
-	var url = 'http://tonjoo.com/about/?ttom-jsonp=promo';
+	var url = tomAdsEndpoint;
 	jQuery.ajax({url: url, dataType:'jsonp'}).done(function(data){  
 		//promo_1
 		if(typeof data =='object'){  
