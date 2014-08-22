@@ -4,7 +4,7 @@
  *	Plugin URI: 
  *	Description: Theme options framework and generator for WordPress Theme. Available as a plugin or library
  *	Author:  tonjoo
- *	Version: 1.0.1
+ *	Version: 1.0.2
  *	Author URI: https://tonjoo.com
  *  Contributor: Todi Adiyatmo Wijoyo, Lafif Astahdziq
  */
