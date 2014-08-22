@@ -1,0 +1,10 @@
+{
+	"require": {
+		"lotus/almari": "*"
+		},
+	"autoload": {
+		"psr-4": { 
+			"Tonjoo\\TOM\\": "src/"
+		}
+	}
+}

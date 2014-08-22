@@ -1,6 +1,6 @@
 === Tonjoo Theme Options Maker ===
 Contributors: Todi.Adiatmo, qutek
-Tags: excerpt, home, search, archive, automatic, auto, justify
+Tags: theme options, admin, options, framework
 Requires at least: 3.0.3
 Tested up to: 3.6
 Stable tag: trunk
@@ -52,6 +52,9 @@ Please support this plugin by [donate](http://www.tonjoo.com/donate/ "donate") :
 4. Custom ads on options page
 
 == Changelog ==
+**1.0.2**
+- Used almari ioc framework
+- Fix some bug 
 
 **1.0.1** 
 - Add feature custom ads

@@ -730,15 +730,24 @@ jQuery(document).ready(function($) {
 	  	$('div.tooltip').remove();
 	  	var title 	= $(this).find('.tooltipValue').attr('data-title');
 	  	var shortcode 	= $(this).find('.tooltipValue').text();
-	  	var	elementDiv 	=  '<div class="tooltip">';
+	  	var	elementDiv 	=  '<div class="tooltip type'+tomAdsEnabled+'">';
 	  		elementDiv 	+= '	<div class="tooltip-head">'+title+'</div>';
 	  		elementDiv 	+= '	<div class="tooltip-body">'+shortcode+'</div>';
 	  		elementDiv 	+= '</div>';
 
 	  	$(elementDiv).appendTo($(this));
 
+	  	var tooltipWidth = $(this).find('.tooltip').width();
+
+	  	// alert(tooltipWidth);
+
 	  	var position = $(this).position();
-	  	$('div.tooltip').css({top: position.top - 10, left: position.left + 38});
+	  	// console.log(tooltipWidth);
+	  	if (tomAdsEnabled == '1'){
+	  		$('div.tooltip').css({top: position.top - 10, left: position.left + 38});
+	  	} else {
+	  		$('div.tooltip').css({top: position.top - 10, left: position.left - (tooltipWidth + 10)});
+	  	}
 	};
  
 	var hideTooltip = function() {

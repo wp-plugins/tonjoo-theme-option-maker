@@ -1,31 +1,25 @@
 <?php
 
-class tomGenerate {
+namespace Tonjoo\TOM;
 
-	static function tom_tabs() {
-		$counter = 0;
-		$options = tomOptions::tom_options_fields();
-		$menu = '';
+use Tonjoo\TOM\Facade\TOMOptionFacade as TOMOptionFacade;
 
-		foreach ( $options as $obj_key =>$key ) {
-			// Heading for Navigation
-			if ( $key['type'] == "heading" ) {
-				$counter++;
-				$class = '';
-				$class = ! empty( $obj_key ) ? $obj_key : $key['name'];
-				$class = sanitize_title_with_dashes( $class ) . '-tab';
-				$menu .= '<a id="options-group-'.  $counter . '-tab" class="nav-tab ' . $class .'" title="' . esc_attr( $key['name'] ) . '" href="' . esc_attr( '#options-group-'.  $counter ) . '">' . esc_html( $key['name'] ) . '</a>';
-			}
-		}
+class TOMGenerate
+{
+	private $options; 
+	private $app;
 
-		return $menu;
-	}
-
-	static function create_tom_tabs() {
-		$counter = 0;
-		$options = tomOptions::tom_options_fields();
-		$menu = '';
+	public function __construct($container,$tom) {
+		$this->app = $container;
 		
+		$this->options = $tom->tom_options_fields();
+	}
+
+	function tom_tabs() {
+		$counter = 0;
+		$options = $this->options;
+		$menu = '';
+
 		foreach ( $options as $obj_key =>$key ) {
 			// Heading for Navigation
 			if ( $key['type'] == "heading" ) {
@@ -36,23 +30,20 @@ class tomGenerate {
 				$menu .= '<a id="options-group-'.  $counter . '-tab" class="nav-tab ' . $class .'" title="' . esc_attr( $key['name'] ) . '" href="' . esc_attr( '#options-group-'.  $counter ) . '">' . esc_html( $key['name'] ) . '</a>';
 			}
 		}
-		/* Create new group tab */
-		$menu .= '<a id="new-group-tab" class="nav-tab" title="Create new group" href="#new-group"><i class="dashicons dashicons-plus-alt"></i></a>';
 
 		return $menu;
 	}
 
-	
 	/**
 	 * Generates the options fields that are used in the form.
 	 */
-	static function tom_generate_options_fields() {
+	function tom_generate_options_fields() {
 
 		$option_name = 'tom_data';
 
 		$settings = get_option($option_name);
 
-		$options = tomOptions::tom_options_fields();
+		$options = $this->options;
 		$counter = 0;
 		$menu = '';
 
@@ -254,7 +245,7 @@ class tomGenerate {
 					$output .= '<td>' . "\n";
 								echo $output;
 								$textarea_name = esc_attr( $option_name . '[' . $obj_key . ']' );
-								$defaultOptions = tomOptions::tom_default_options();
+								$defaultOptions = TOMOptionFacade::tom_default_options();
 								$editor_settings = $defaultOptions['editor-settings'];
 								$editor_settings['textarea_name'] = $textarea_name;
 								wp_editor( $val, $obj_key, $editor_settings );
@@ -267,7 +258,7 @@ class tomGenerate {
 					break;
 
 				case 'typography':
-					$defaultOptions = tomOptions::tom_default_options();
+					$defaultOptions = TOMOptionFacade::tom_default_options();
 
 					$output .= '<tr class="alternate tom-item">' . "\n";
 					$output .= '<th scope="row"><label for="' . esc_attr( $obj_key ) . '">' . esc_attr( $name ) . '</label><br><span class="description">' . esc_attr( $desc ) . '</span></th>' . "\n";
@@ -329,7 +320,7 @@ class tomGenerate {
 		} else { 
 
 		/* Handle if empty options  */
-		$config = tomOptions::tom_configs();
+		$config = TOMOptionFacade::tom_configs();
 		$output =  '<div id="empty-group" class="group empty-group">
 					  <h3>
 					    Oops! your options look empty..
@@ -358,11 +349,35 @@ class tomGenerate {
 		echo $submit;
 	}
 
-	static function tom_generate_create_options_fields() {
+
+
+	function create_tom_tabs() {
+		$counter = 0;
+		$options = $this->options;
+		$menu = '';
+		
+		foreach ( $options as $obj_key =>$key ) {
+			// Heading for Navigation
+			if ( $key['type'] == "heading" ) {
+				$counter++;
+				$class = '';
+				$class = ! empty( $obj_key ) ? $obj_key : $key['name'];
+				$class = sanitize_title_with_dashes( $class ) . '-tab';
+				$menu .= '<a id="options-group-'.  $counter . '-tab" class="nav-tab ' . $class .'" title="' . esc_attr( $key['name'] ) . '" href="' . esc_attr( '#options-group-'.  $counter ) . '">' . esc_html( $key['name'] ) . '</a>';
+			}
+		}
+		/* Create new group tab */
+		$menu .= '<a id="new-group-tab" class="nav-tab" title="Create new group" href="#new-group"><i class="dashicons dashicons-plus-alt"></i></a>';
+
+		return $menu;
+	}
+	
+
+	function tom_generate_create_options_fields() {
 
 		$option_name = 'tom_options';
-		$options = tomOptions::tom_options_fields();
-		$config = tomOptions::tom_configs();
+		$options = $this->options;
+		$config = TOMOptionFacade::tom_configs();
 
 		$counter = 0;
 		$initNestable = '';
@@ -372,7 +387,7 @@ class tomGenerate {
 				$req = ! empty( $key['required'] ) ? $key['required'] : '';
 				$desc = ! empty( $key['desc'] ) ? $key['desc'] : '';
 				$type = ! empty( $key['type'] ) ? $key['type'] : '';
-				$configs = tomOptions::tom_configs();
+				$configs = TOMOptionFacade::tom_configs();
 				$types = $configs['type-options'];
 				switch ($type) {
 					case 'select':
@@ -617,7 +632,7 @@ class tomGenerate {
 																
 																case 'typography':
 																	if (!empty($val)) {
-																	$defaultOptions = tomOptions::tom_default_options();
+																	$defaultOptions = TOMOptionFacade::tom_default_options();
 						$output .=			              			'<div id="tom-default-'.esc_attr( $obj_key ).'" class="input-default typography-options" '.$display.'>
 															        	<label>Color :</label>
 																		<div class="color-container">
@@ -747,5 +762,4 @@ class tomGenerate {
 			/* Print Submit Button */
 			echo $submit;
 	}
-
 }
