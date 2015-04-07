@@ -1,5 +1,5 @@
 === Tonjoo Theme Options Maker ===
-Contributors: Todi.Adiatmo, qutek
+Contributors: Todi.Adiatmo, qutek, Alzea
 Tags: theme options, admin, options, framework, generator, theme
 Requires at least: 3.0.3
 Tested up to: 3.6
@@ -29,15 +29,15 @@ Tonjo Theme Options Maker (TTOM) is a theme options framework and generator for 
 * Or create options directly from admin dashboard :
     > > From WP Admin go to TTOM Options -> Create Options.
 
-if you have any questions,comment,customization request or suggestion please contact us via our [support forum](https://forum.tonjoo.com/thread-category/tonjoo-tom/)
+If you have any questions,comment,customization request or suggestion please contact us via our [support forum](https://forum.tonjoo.com/thread-category/tonjoo-tom/)
 
-Plugin guide can be read here : [https://tonjoo.com/addons/tonjoo-tom/#manual](https://tonjoo.com/addons/tonjoo-tom/#manual)
+If you have any questions,comment,customization request or suggestion please contact us via our support forum: [Tonjoo Forum](https://forum.tonjoo.com/thread-category/tonjoo-tom/) or you can find our best plugins at [Tonjoo Studio](https://tonjoostudio.com)
 
-Theme integration manual : [https://tonjoo.com/tonjoo-tom-theme-integration/](https://tonjoo.com/tonjoo-tom-theme-integration/)
+Plugin guide can be read here : [Tonjoo Theme Options Maker](https://tonjoo.com/addons/tonjoo-tom/#manual)
 
-Find more detail on our official [plugin page](https://tonjoo.com/addons/tonjoo-tom "visit plugin site")
+Theme integration manual : [Tonjoo Tom Theme Integration](https://tonjoo.com/tonjoo-tom-theme-integration/)
 
-Please support this plugin by [donate](http://www.tonjoo.com/donate/ "donate") :)
+We can also modify your WordPress plugins according to your needs. Visit us: [Tonjoo WordPress Developer](https://tonjoo.com "Visit Tonjoo Dev Website")
 
 == Installation ==
 
