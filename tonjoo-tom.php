@@ -9,7 +9,7 @@
  *  Contributor: Todi Adiyatmo Wijoyo, Lafif Astahdziq
  */
 
-define('TOM_VERSION','1.0.0');
+define('TOM_VERSION','1.0.2');
 define('TOM_BASE_PATH',__DIR__);
 
 // require_once( plugin_dir_path( __FILE__ ) . 'src/ajax.php');

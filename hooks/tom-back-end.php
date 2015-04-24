@@ -64,7 +64,7 @@ function tom_validate_options( $input ) {
 	/* Merge with main input */
 	$input = array_merge($input,$haveoptions);
 
-	return $input;
+	return json_encode($input);
 }
 
 function tom_validate_create_options( $input ) {
@@ -99,7 +99,7 @@ function tom_validate_create_options( $input ) {
 	/* Merge with main input */
 	$input = array_merge($input,$haveoptions);
 
-	return $input;
+	return json_encode($input);
 	
 }
 

@@ -23,6 +23,9 @@ class TOMShortcode
 	   	$id = $param['id'];
 
 	    $data = get_option( 'tom_data' );
+
+	     $data  = is_string($data) && is_object(json_decode($data )) ? json_decode($data,true ) : $data ;
+
 	    $options = TOMOptionFacade::tom_options_fields();
 
 		$type = @$options[$id]['type'];

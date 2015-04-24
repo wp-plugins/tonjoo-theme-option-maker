@@ -60,7 +60,7 @@ abstract class Facade {
             throw new \Exception($name . ' does not implement ' . $method . ' method.');
         }
 
-        return call_user_func_array([ $instance, $method ], $args);
+        return call_user_func_array (array($instance, $method), $args);
     }
 
 }

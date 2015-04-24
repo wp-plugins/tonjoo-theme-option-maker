@@ -43,6 +43,8 @@ class TOMGenerate
 
 		$settings = get_option($option_name);
 
+		$settings  = is_string($settings) && is_object(json_decode($settings )) ? json_decode($settings,true ) : $settings ;
+		
 		$options = $this->options;
 		$counter = 0;
 		$menu = '';
