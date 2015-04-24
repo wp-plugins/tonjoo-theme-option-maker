@@ -4,12 +4,12 @@
  *	Plugin URI: 
  *	Description: Theme options framework and generator for WordPress Theme. Available as a plugin or library
  *	Author:  tonjoo
- *	Version: 1.0.3
+ *	Version: 1.0.4
  *	Author URI: https://tonjoo.com
  *  Contributor: Todi Adiyatmo Wijoyo, Lafif Astahdziq
  */
 
-define('TOM_VERSION','1.0.3');
+define('TOM_VERSION','1.0.4');
 define('TOM_BASE_PATH',__DIR__);
 
 // require_once( plugin_dir_path( __FILE__ ) . 'src/ajax.php');

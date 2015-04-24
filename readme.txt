@@ -52,8 +52,11 @@ Please support this plugin by [donate](http://www.tonjoo.com/donate/ "donate") :
 4. Custom ads on options page
 
 == Changelog ==
+**1.0.4**
+- Add CDN Feature
+
 **1.0.3**
-- Add PHP 5.3 support
+- Add PHP 5.3 Support
 
 **1.0.2**
 - Used almari ioc framework

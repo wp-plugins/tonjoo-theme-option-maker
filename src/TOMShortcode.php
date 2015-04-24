@@ -43,8 +43,9 @@ class TOMShortcode
 				break;
 
 			case 'upload':
-				$image = wp_get_attachment_image_src( $val, 'full' );
-				$value = (is_numeric($val)) ? $image[0] : $val;
+				// $image = wp_get_attachment_image_src( $val, 'full' );
+				$image = wp_get_attachment_url( $val );
+				$value = ($image != false) ? $image : '';
 				break;
 
 			case 'typography':
