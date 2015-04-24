@@ -1,5 +1,5 @@
 === Tonjoo Theme Options Maker ===
-Contributors: Todi.Adiatmo, qutek
+Contributors: Todi.Adiatmo, qutek, Alzea
 Tags: theme options, admin, options, framework, generator, theme
 Requires at least: 3.0.3
 Tested up to: 3.6
@@ -52,6 +52,9 @@ Please support this plugin by [donate](http://www.tonjoo.com/donate/ "donate") :
 4. Custom ads on options page
 
 == Changelog ==
+**1.0.3**
+- Add PHP 5.3 support
+
 **1.0.2**
 - Used almari ioc framework
 - Fix some bug 
