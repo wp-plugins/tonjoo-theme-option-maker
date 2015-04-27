@@ -29,13 +29,13 @@ Tonjo Theme Options Maker (TTOM) is a theme options framework and generator for 
 * Or create options directly from admin dashboard :
     > > From WP Admin go to TTOM Options -> Create Options.
 
-if you have any questions,comment,customization request or suggestion please contact us via our [support forum](https://forum.tonjoo.com/thread-category/tonjoo-tom/)
+If you have any questions,comment,customization request or suggestion please contact us via our [support forum](https://forum.tonjoo.com/thread-category/tonjoo-tom/)
 
-Plugin guide can be read here : [https://tonjoo.com/addons/tonjoo-tom/#manual](https://tonjoo.com/addons/tonjoo-tom/#manual)
+Plugin guide can be read here : [Tonjoo Theme Options Maker Manual](https://tonjoostudio.com/addons/tonjoostudio-tom/?utm_source=wp_org&utm_medium=link&utm_campaign=ttom)
 
 Theme integration manual : [https://tonjoo.com/tonjoo-tom-theme-integration/](https://tonjoo.com/tonjoo-tom-theme-integration/)
 
-Find more detail on our official [plugin page](https://tonjoo.com/addons/tonjoo-tom "visit plugin site")
+Find more detail on our official [Tonjoo Theme Option Maker](https://tonjoostudio.com/addons/tonjoostudio-tom/?utm_source=wp_org&utm_medium=link&utm_campaign=ttom "visit plugin site")
 
 Please support this plugin by [donate](http://www.tonjoo.com/donate/ "donate") :)
 
