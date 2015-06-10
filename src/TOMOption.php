@@ -189,9 +189,14 @@ class TOMOption
 	function tom_options_fields() {
 		$options = get_option( 'tom_options' );
 
+
+		// echo "<pre>";
+		// var_dump($options);
+		// exit();
+
 		$options  = is_string($options) && is_object(json_decode($options )) ? json_decode($options,true ) : $options ;
 		
-		if ( !empty( $options )) {
+		if ( !empty( $options ) && is_array($options) ) {
 			$options_from_db = $options;
 		} else {
 			$options_from_db = array();

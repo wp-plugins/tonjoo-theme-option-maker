@@ -79,7 +79,9 @@ function tom_validate_create_options( $input ) {
 
   		unset($input['new-group']);
   	} else {
-  		unset($input['new-group']);
+  		if(isset($input['new-group'])){
+  			unset($input['new-group']);
+  		}
   	}
   	
   	$value['options'] = array();

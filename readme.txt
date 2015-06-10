@@ -2,7 +2,7 @@
 Contributors: Todi.Adiatmo, qutek, Alzea
 Tags: theme options, admin, options, framework, generator, theme
 Requires at least: 3.0.3
-Tested up to: 4.2
+Tested up to: 3.6
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -29,13 +29,13 @@ Tonjo Theme Options Maker (TTOM) is a theme options framework and generator for 
 * Or create options directly from admin dashboard :
     > > From WP Admin go to TTOM Options -> Create Options.
 
-If you have any questions,comment,customization request or suggestion please contact us via our [support forum](https://forum.tonjoo.com/thread-category/tonjoo-tom/)
+if you have any questions,comment,customization request or suggestion please contact us via our [support forum](https://forum.tonjoo.com/thread-category/tonjoo-tom/)
 
-Plugin guide can be read here : [Tonjoo Theme Options Maker Manual](https://tonjoostudio.com/addons/tonjoostudio-tom/?utm_source=wp_org&utm_medium=link&utm_campaign=ttom)
+Plugin guide can be read here : [https://tonjoo.com/addons/tonjoo-tom/#manual](https://tonjoo.com/addons/tonjoo-tom/#manual)
 
-Theme integration manual : [TTOM Manual](https://tonjoostudio.com/tonjoo-tom-theme-integration/)
+Theme integration manual : [https://tonjoo.com/tonjoo-tom-theme-integration/](https://tonjoo.com/tonjoo-tom-theme-integration/)
 
-Find more detail on our official [Tonjoo Theme Option Maker](https://tonjoostudio.com/addons/tonjoostudio-tom/?utm_source=wp_org&utm_medium=link&utm_campaign=ttom "visit plugin site")
+Find more detail on our official [plugin page](https://tonjoo.com/addons/tonjoo-tom "visit plugin site")
 
 Please support this plugin by [donate](http://www.tonjoo.com/donate/ "donate") :)
 
@@ -52,11 +52,8 @@ Please support this plugin by [donate](http://www.tonjoo.com/donate/ "donate") :
 4. Custom ads on options page
 
 == Changelog ==
-**1.0.4**
-- Add CDN Feature
-
-**1.0.3**
-- Add PHP 5.3 Support
+**1.0.5**
+- Fix some redirect options.php issues 
 
 **1.0.2**
 - Used almari ioc framework
