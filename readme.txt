@@ -31,13 +31,13 @@ Tonjo Theme Options Maker (TTOM) is a theme options framework and generator for 
 
 If you have any questions,comment,customization request or suggestion please contact us via our <a href="https://forum.tonjoo.com/thread-category/tonjoo-tom/" title="support forum" rel="friend">Tonjoo Support Forum</a>
 
-Plugin guide can be read here : <a href="https://tonjoo.com/addons/tonjoo-tom/#manual" title="TTOM Manual" rel="friend">Tonjoo Theme Options Maker Manual</a>
+Plugin guide can be read here : <a href="https://tonjoostudio.com/addons/tonjoostudio-tom/?utm_source=wp_org&utm_medium=link&utm_campaign=ttom#manual" title="TTOM Manual" rel="friend">Tonjoo Theme Options Maker Manual</a>
 
-Theme integration manual : <a href="https://tonjoo.com/tonjoo-tom-theme-integration/" title="TTOM integration manual" rel="friend">TTOM Integration Manual</a>
+Theme integration manual : <a href="https://tonjoostudio.com/tonjoo-tom-theme-integration/" title="TTOM integration manual" rel="friend">TTOM Integration Manual</a>
 
-Find more detail on our official <a href="https://tonjoo.com/addons/tonjoo-tom" title="TTOM" rel="friend">TTOM Page</a>
+We can also modify your WordPress plugins according to your needs. Visit us: <a href="https://tonjoo.com/" rel="me">Tonjoo WordPress Developer</a>
 
-Please support this plugin by [donate](http://www.tonjoo.com/donate/ "donate") :)
+Find our new plugin: <a href="https://tonjoostudio.com/addons/woo-ongkir/?utm_source=wp_org&utm_medium=link&utm_campaign=woo_ongkir" rel="me">WooCommerce JNE Shipping</a>
 
 == Installation ==
 
