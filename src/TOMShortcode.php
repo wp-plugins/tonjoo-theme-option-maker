@@ -62,7 +62,7 @@ class TOMShortcode
 		$tom_data = (!empty($value)) ? $value : $default;
 
 		/* If SSL Enabled use https replace */
-		$tom_data = (is_ssl()) ? tom_https_link($tom_data) : $tom_data;
+		$tom_data = (is_ssl()) ? $this->tom_https_link($tom_data) : $tom_data;
 
 	    return $tom_data;
 	}
